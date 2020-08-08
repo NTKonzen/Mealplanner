@@ -1,5 +1,5 @@
 # mealplanner
-The Fab Five's Fantastic Food
+The Fab Five's Fantastic Foods
 
 # Description
 
