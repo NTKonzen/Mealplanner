@@ -1,11 +1,5 @@
 $(document).ready(function() {
 
-    let changes;
-
-    let change2;
-
+    console.log('this is a test')
     
-    console.log('hey girl hey')
-
-    const list = this
 });
