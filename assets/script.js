@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-    let change;
+    let changes;
+
+    let change2;
 
     
     console.log('hey girl hey')
