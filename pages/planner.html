@@ -1,18 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Meal Planner</title>
 
     <!-- Fontawesome Link -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
-<body>
-    
 
-    
+<body>
+
+    <!--inset completed nav from index.html-->
+
+    <main class="container">
+        <div class="row" id="dates">
+            <!--the ID's of "___date" exist for moment.js to enter the dates-->
+            <div class="col" id="mondate"></div>
+            <div class="col" id="tuesdate"></div>
+            <div class="col" id="wendsdate"></div>
+            <div class="col" id="thursdate"></div>
+            <div class="col" id="fridate"></div>
+            <div class="col" id="saturdate"></div>
+            <div class="col" id="sundate"></div>
+        </div>
+        <!--end of dates row-->
+        <div class="row" id="calender">
+            <!--pay attention to the diffrence between the "-date" id's and the "-day" id's-->
+            <div class="col" id="monday">
+                <div class="row block breakfast">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of breakfast-->
+                <div class="row block lunch">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of lunch-->
+                <div class="row block dinner">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of dinner-->
+            </div>
+            <!--end of monday-->
+            <div class="col" id="tuesdayy">
+                <div class="row block breakfast">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of breakfast-->
+                <div class="row block lunch">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of lunch-->
+                <div class="row block dinner">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of dinner-->
+            </div>
+            <!--end of tuesday-->
+            <div class="col" id="wendsday">
+                <div class="row block breakfast">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of breakfast-->
+                <div class="row block lunch">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of lunch-->
+                <div class="row block dinner">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of dinner-->
+            </div>
+            <!--end of wednesday-->
+            <div class="col" id="thursday">
+                <div class="row block breakfast">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of breakfast-->
+                <div class="row block lunch">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of lunch-->
+                <div class="row block dinner">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of dinner-->
+            </div>
+            <!--end of thursday-->
+            <div class="col" id="friday">
+                <div class="row block breakfast">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of breakfast-->
+                <div class="row block lunch">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of lunch-->
+                <div class="row block dinner">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of dinner-->
+            </div>
+            <!--end of friday-->
+            <div class="col" id="saturday">
+                <div class="row block breakfast">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of breakfast-->
+                <div class="row block lunch">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of lunch-->
+                <div class="row block dinner">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of dinner-->
+            </div>
+            <!--end of saturday-->
+            <div class="col" id="sunday">
+                <div class="row block breakfast">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of breakfast-->
+                <div class="row block lunch">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of lunch-->
+                <div class="row block dinner">
+                    <div class="row ">
+                        <div class="col timearea"></div>
+                        <div class="col mealarea"></div>
+                    </div>
+                    <div class="row recipearea"></div>
+                </div>
+                <!--end of dinner-->
+            </div>
+            <!--end of sunday-->
+        </div>
+        <!--end of calender-->
+    </main>
+
+
+    <section class="form-group">
+        <label for="search">Recipe Search:</label>
+        <input type="text" class="form-control" id="recipe-search">
+        <button id="searchBtn">Search</button>
+    </section>
+    <!--insert sticky footer from index.html-->
+
     <!-- jQuery Script -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="../assets/script.js"></script>
 </body>
+
 </html>
