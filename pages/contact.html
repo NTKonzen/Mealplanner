@@ -1,64 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact the Fab 5</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <!-- Fontawesome Link -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!--insert nav from index-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact the Fab 5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <main class="container">
-      <!--insert contact form-->
-      <!--ideally one that creates a github issue but :shrug:-->
-      <!--insert github issue instructions w/ link-->
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate" />
-              <label for="icon_prefix">Name</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">email</i>
-              <input id="icon_telephone" type="tel" class="validate" />
-              <label for="icon_telephone">Email</label>
-            </div>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fontawesome Link -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+</head>
+<nav>
+  <a href="#" class="brand-logo">F5FF</a>
+  <ul class="dropdown-content">
+    <!--insert dropdown content tbd here-->
+  </ul>
+</nav>
+
+<body>
+  <!--insert nav from index-->
+
+  <main class="container">
+    <!--insert contact form-->
+    <!--ideally one that creates a github issue but :shrug:-->
+    <!--insert github issue instructions w/ link-->
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate" />
+            <label for="icon_prefix">Name</label>
           </div>
-        </form>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">email</i>
+            <input id="icon_telephone" type="tel" class="validate" />
+            <label for="icon_telephone">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">chat</i>
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Whats going on?</label>
+              </div>
+            </div>
+  
+            </form>
+          </div>
+        
+   
+    <div class="row">
+      <div class="input-field col s4">
+        <i class="material-icons prefix">sentiment_dissatisfied</i>
       </div>
-    </main>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">sentiment_neutral</i>
+      </div>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">sentiment_satisfied</i>
+      </div>
+      </div>
 
-    <!--insert footer from index-->
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </main>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--insert footer from index-->
 
-    <!-- jQuery Script -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
-    <!-- Jquery UI.js Link -->
-    <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./script.js"></script>
-  </body>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- jQuery Script -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <!-- Jquery UI.js Link -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
-
