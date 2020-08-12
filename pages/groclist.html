@@ -1,26 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Grocery List</title>
 
     <!-- Fontawesome Link -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
+
 <body>
-    
+
     <!--insert nav from index.html-->
-    
+
     <main class="container">
-        <!--insert column with dynamic grocery list-->
-        <!--insert column with local grocy stores that deliver-->
+        <div class="row">
+            <!--main section of the grocery list-->
+            <section class="col">
+                <!--using h1 for now, not permenant if need be-->
+                <h1>Grocery List</h1>
+                <form>
+                    <!--start with 3 items. use the add button to dynamically add additional list-items-->
+                    <!--an individual grocery item-->
+                    <div class="row list-item">
+                        <div class="input-field">
+                            <input type="checkbox" />
+                            <textarea class="materialize-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="row list-item">
+                        <div class="input-field">
+                            <input type="checkbox" />
+                            <textarea class="materialize-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="row list-item">
+                        <div class="input-field">
+                            <input type="checkbox" />
+                            <textarea class="materialize-textarea"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <!--use the id "add-list-item" to dynamically create a new list item-->
+                <button class="btn" id="add-list-item">Add an Item</button>
+                <!--perhaps create a button that removes all of the checked items???-->
+            </section>
+            <!--aside section that list nearby stores with delivery-->
+            <aside class="col">
+                <h2>Local Stores that Deliver</h2>
+            </aside>
+        </div>
     </main>
-    
+
     <!--insert sticky footer from index.html-->
 
     <!-- jQuery Script -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="../assets/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- Jquery UI.js Link -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Local JavaScript File -->
+    <script src="./script.js"></script>
 </body>
+
 </html>
