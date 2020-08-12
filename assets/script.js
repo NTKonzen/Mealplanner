@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $('#startBtn').click(function () {
-        location.replace('./pages/planner.html');
+        location.replace('./planner.html');
         JSON.parse(localStorage.getItem('mondayMeals'));
         localStorage.getItem('tuesdayMeals');
         localStorage.getItem('wednesdayMeals');
@@ -28,6 +28,9 @@ $(document).ready(function () {
                 'method': 'GET'
             }).then(response => {
                 console.log(response)
+
+                recipeElement = $("<div class='recipe>");
+                
             })
         });
 
