@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Meal Planner</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Fontawesome Link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <link rel="stylesheet" href="../assets/style.css">
 </head>
 
 <body>
@@ -29,8 +30,10 @@
         <!--end of dates row-->
         <div class="row" id="calender">
             <!--pay attention to the diffrence between the "-date" id's and the "-day" id's-->
-            <div class="col" id="monday">
+            <div class="col s1.5" id="monday">
+                <th>Monday</th>
                 <div class="row block breakfast">
+                    <th>Breakfast</th>
                     <div class="row ">
                         <div class="col timearea"></div>
                         <div class="col mealarea"></div>
@@ -39,7 +42,8 @@
                 </div>
                 <!--end of breakfast-->
                 <div class="row block lunch">
-                    <div class="row ">
+                    <th>Lunch</th>
+                    <div class="row">
                         <div class="col timearea"></div>
                         <div class="col mealarea"></div>
                     </div>
@@ -47,6 +51,7 @@
                 </div>
                 <!--end of lunch-->
                 <div class="row block dinner">
+                    <th>Dinner</th>
                     <div class="row ">
                         <div class="col timearea"></div>
                         <div class="col mealarea"></div>
@@ -56,7 +61,8 @@
                 <!--end of dinner-->
             </div>
             <!--end of monday-->
-            <div class="col" id="tuesdayy">
+            <div class="col s1.5" id="tuesdayy">
+                <th>Tuesday</th>
                 <div class="row block breakfast">
                     <div class="row ">
                         <div class="col timearea"></div>
@@ -83,7 +89,8 @@
                 <!--end of dinner-->
             </div>
             <!--end of tuesday-->
-            <div class="col" id="wendsday">
+            <div class="col s1.5" id="wendsday">
+                <th>Wednesday</th>
                 <div class="row block breakfast">
                     <div class="row ">
                         <div class="col timearea"></div>
@@ -110,7 +117,8 @@
                 <!--end of dinner-->
             </div>
             <!--end of wednesday-->
-            <div class="col" id="thursday">
+            <div class="col s1.5" id="thursday">
+                <th>Thursday</th>
                 <div class="row block breakfast">
                     <div class="row ">
                         <div class="col timearea"></div>
@@ -137,7 +145,8 @@
                 <!--end of dinner-->
             </div>
             <!--end of thursday-->
-            <div class="col" id="friday">
+            <div class="col s1.5" id="friday">
+                <th>Friday</th>
                 <div class="row block breakfast">
                     <div class="row ">
                         <div class="col timearea"></div>
@@ -164,7 +173,8 @@
                 <!--end of dinner-->
             </div>
             <!--end of friday-->
-            <div class="col" id="saturday">
+            <div class="col s1.5" id="saturday">
+                <th>Saturday</th>
                 <div class="row block breakfast">
                     <div class="row ">
                         <div class="col timearea"></div>
@@ -191,7 +201,8 @@
                 <!--end of dinner-->
             </div>
             <!--end of saturday-->
-            <div class="col" id="sunday">
+            <div class="col s1.5" id="sunday">
+                <th>Sunday</th>
                 <div class="row block breakfast">
                     <div class="row ">
                         <div class="col timearea"></div>
@@ -222,19 +233,27 @@
         <!--end of calender-->
     </main>
 
+   <div class="row">
 
-    <section class="form-group">
+    <section class="form-group col s4">
         <label for="search">Recipe Search:</label>
         <input type="text" class="form-control" id="recipe-search">
         <button id="searchBtn">Search</button>
     </section>
+   </div>
+
+   <div class="row">
+       <section id="recipe-cards">
+
+       </section>
+   </div>
     <!--insert sticky footer from index.html-->
 
     <!-- jQuery Script -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="../assets/planner.js"></script>
 </body>
 
 </html>
