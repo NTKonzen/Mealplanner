@@ -9,6 +9,10 @@
     <!-- Fontawesome Link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <!-- Our own CSS stylesheet -->
+    <!-- added stylesheet Aug. 13 2:52pm talia -->
+    <link rel="stylesheet" href="assets/style.css" media="screen" />
 </head>
 
 <body>
@@ -21,40 +25,52 @@
             <section class="col">
                 <!--using h1 for now, not permenant if need be-->
                 <h1>Grocery List</h1>
-                <form>
+                <form id="groc-list">
                     <!--start with 3 items. use the add button to dynamically add additional list-items-->
                     <!--an individual grocery item-->
                     <div class="row list-item">
                         <div class="input-field">
                             <input type="checkbox" />
-                            <textarea class="materialize-textarea"></textarea>
+                            <input placeholder="Grocery Item" type="text" class="validate">
                         </div>
                     </div>
                     <div class="row list-item">
                         <div class="input-field">
                             <input type="checkbox" />
-                            <textarea class="materialize-textarea"></textarea>
+                            <input placeholder="Grocery Item" type="text" class="validate">
                         </div>
                     </div>
                     <div class="row list-item">
                         <div class="input-field">
                             <input type="checkbox" />
-                            <textarea class="materialize-textarea"></textarea>
+                            <input placeholder="Grocery Item" type="text" class="validate">
                         </div>
                     </div>
                 </form>
-                <!--use the id "add-list-item" to dynamically create a new list item-->
-                <button class="btn" id="add-list-item">Add an Item</button>
-                <!--perhaps create a button that removes all of the checked items???-->
+                <div class="row">
+                    <!--use the id "add-list-item" to dynamically create a new list item-->
+                    <button class="btn" id="add-list-item" onClick="addListItem()">Add an Item</button>
+                    <!--perhaps create a button that removes all of the checked items-->
+                    <button class="btn" id="clear-check-items" onClick="clearChecks()">Remove Checks</button>
+                    <!--save button for list-->
+                    <button class="btn" id="save-list" onClick="saveList()">Save List</button>
+                </div>
             </section>
             <!--aside section that list nearby stores with delivery-->
-            <aside class="col">
-                <h2>Local Stores that Deliver</h2>
-            </aside>
+            <!--<aside class="col sidenav">
+                <h2>Stores that Deliver</h2>
+            </aside>-->
         </div>
     </main>
 
     <!--insert sticky footer from index.html-->
+    <!-- added footer Aug. 13 2:26pm talia -->
+    <footer class="footer">
+        <div class="two-toned-footer-color"></div>
+        <p class="text-muted text-muted-footer text-center">
+        &copy; Copyright 2020 F5FF
+        </p>
+    </footer>
 
     <!-- jQuery Script -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
@@ -68,6 +84,9 @@
 
     <!-- Local JavaScript File -->
     <script src="./script.js"></script>
+
+    <!--adding the JS for this specific file-->
+    <script src="../assets/groclist.js"></script>
 </body>
 
 </html>
