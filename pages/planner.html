@@ -14,73 +14,316 @@
 
 <body>
 
-    <!--inset completed nav from index.html-->
-
-    <main class="container">
-        <div class="row" id="dates">
-            <!--the ID's of "___date" exist for moment.js to enter the dates-->
-            <div class="col" id="mondate"></div>
-            <div class="col" id="tuesdate"></div>
-            <div class="col" id="wendsdate"></div>
-            <div class="col" id="thursdate"></div>
-            <div class="col" id="fridate"></div>
-            <div class="col" id="saturdate"></div>
-            <div class="col" id="sundate"></div>
+    <nav>
+        <div class="nav-wrapper green">
+          
+          <a href="#!" class="brand-logo">Logo</a>
+          <ul class="right hide-on-med-and-down">
+      <!--       <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li> -->
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
         </div>
-        <!--end of dates row-->
-        <div class="row" id="calender">
-
-            <!--pay attention to the diffrence between the "-date" id's and the "-day" id's-->
-            <div class="row" id="monday">
-                <div class="col s2">Monday</div>
-                <div class="col s3" id="mon-break">Breakfast</div>
-                <div class="col s3" id="mon-lun">Lunch</div>
-                <div class="col s3" id="mon-din">Dinner</div>
+      </nav>
+      <!-- Dropdown Trigger -->
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!"><i class="material-icons">local_phone</i>Contact</a></li>
+          <li><a href="#!"><i class="material-icons">view_module</i>Planner</a></li>
+          <li><a href="#!"><i class="material-icons">kitchen</i>Grocery List</a></li> 
+          </ul>
+          
+            <main class="container">
+            <div class="row" id="dates">
+              <!--the ID's of "___date" exist for moment.js to enter the dates-->
+              <div class="col" id="mondate"></div>
+              <div class="col" id="tuesdate"></div>
+              <div class="col" id="wendsdate"></div>
+              <div class="col" id="thursdate"></div>
+              <div class="col" id="fridate"></div>
+              <div class="col" id="saturdate"></div>
+              <div class="col" id="sundate"></div>
             </div>
-            <!--end of monday-->
-            <div class="row" id="tuesday">
-                <div class="col s2">Tuesday</div>
-                <div class="col s3" id="tue-break">Breakfast</div>
-                <div class="col s3" id="tue-lun">Lunch</div>
-                <div class="col s3" id="tue-din">Dinner</div>
-            </div>
-            <!--end of tuesday-->
-            <div class="row" id="wendsday">
-                <div class="col s2">Wednesday</div>
-                <div class="col s3" id="wed-break">Breakfast</div>
-                <div class="col s3" id="wed-lun">Lunch</div>
-                <div class="col s3" id="wed-din">Dinner</div>
-            </div>
-            <!--end of wednesday-->
-            <div class="row" id="thursday">
-                <div class="col s2">Thursday</div>
-                <div class="col s3" id="thu-break">Breakfast</div>
-                <div class="col s3" id="thu-lun">Lunch</div>
-                <div class="col s3" id="thu-din">Dinner</div>
-            </div>
-            <!--end of thursday-->
-            <div class="row" id="friday">
-                <div class="col s2">Friday</div>
-                <div class="col s3" id="fri-break">Breakfast</div>
-                <div class="col s3" id="fri-lun">Lunch</div>
-                <div class="col s3" id="fri-din">Dinner</div>
-            </div>
-            <!--end of friday-->
-            <div class="row" id="saturday">
-                <div class="col s2">Saturday</div>
-                <div class="col s3" id="sat-break">Breakfast</div>
-                <div class="col s3" id="sat-lun">Lunch</div>
-                <div class="col s3" id="sat-din">Dinner</div>
-            </div>
-            <!--end of saturday-->
-            <div class="row" id="sunday">
-                <div class="col s2">Sunday</div>
-                <div class="col s3" id="sun-break">Breakfast</div>
-                <div class="col s3" id="sun-lun">Lunch</div>
-                <div class="col s3" id="sun-din">Dinner</div>
-            </div>
-            <!--end of sunday-->
-        </div>
+            <!--end of dates row-->
+            
+            <div class="row">
+                <div class=" ">
+                  <h4>
+              Monday
+                  </h4>
+                </div>
+      
+            
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Breakfast</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Lunch</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Dinner</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="row">
+                <div>
+                  <h4>
+                      Tuesday
+                  </h4>
+                
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Breakfast</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Lunch</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Dinner</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <h4>
+                    Wednesday
+                  </h4>
+                  
+                  
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Breakfast</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Lunch</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Dinner</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <h4>
+                     Thursday
+                  </h4>
+                  
+                 
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Breakfast</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Lunch</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Dinner</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <h4>
+                      Friday
+                  </h4>
+                  
+                
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Breakfast</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Lunch</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Dinner</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="row">
+                <div>
+                  <h4>
+                    Saturday
+                  </h4>
+                  
+                  
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Breakfast</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Lunch</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Dinner</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  
+                  
+                  <h4>
+                    Sunday
+                  </h4>
+                  
+                  
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Breakfast</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Lunch</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s2 m4">
+                  <div class="card grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Dinner</span>
+                      <p>
+                        recipe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
         <!--end of calender-->
     </main>
 
@@ -101,6 +344,7 @@
     <!--insert sticky footer from index.html-->
 
     <!-- jQuery Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
