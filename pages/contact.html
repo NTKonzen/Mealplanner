@@ -7,11 +7,17 @@
   <title>Contact the Fab 5</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+  <!-- Materialize icons Link -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  
   <!-- Fontawesome Link -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+  <!-- jQuery UI CSS Link -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- Local CSS file -->
+  <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <nav>
   <a href="#" class="brand-logo">F5FF</a>
@@ -27,9 +33,9 @@
     <!--insert contact form-->
     <!--ideally one that creates a github issue but :shrug:-->
     <!--insert github issue instructions w/ link-->
-    <div class="row center">
+    <!-- <div class="row">
       <form class="col s12">
-        <div class="row center">
+        <div class="row">
           <div class="input-field col s6">
             <i class="material-icons prefix">account_circle</i>
             <input id="icon_prefix" type="text" class="validate" />
@@ -41,7 +47,7 @@
             <label for="icon_telephone">Email</label>
           </div>
         </div>
-        <div class="row center">
+        <div class="row">
           <form class="col s12">
             <div class="row">
               <div class="input-field col s12">
@@ -50,37 +56,115 @@
                 <label for="textarea1">Whats going on?</label>
               </div>
             </div>
-  
-            </form>
-          </div>
-        
-   
-    <div class="row center">
 
-      <a class="btn-floating btn-large waves-effect waves-light red"><i class="large material-icons">sentiment_dissatisfied</i></a>
-      <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="material-icons">sentiment_neutral</i></a>
-      <a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">sentiment_satisfied</i></a>
+          </form>
+        </div>
+
+
+        <div class="row">
+          <div class="input-field col s4">
+            <i class="material-icons prefix">sentiment_dissatisfied</i>
+          </div>
+          <div class="input-field col s4">
+            <i class="material-icons prefix">sentiment_neutral</i>
+          </div>
+          <div class="input-field col s4">
+            <i class="material-icons prefix">sentiment_satisfied</i>
+          </div>
+        </div>
 
     </div>
-    <div class="center">
-    <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
       <i class="material-icons right">send</i>
-    </button>
-  </div>
+    </button> -->
+    <div class="row">
+      <!-- Put this in the form tag action="mailto:nicholaskonzen@gmail.com" method="post" enctype="text/plain" -->
+      <form class="col s12" >
+        <div class="row">
+          <h3>Contact Us</h3>
+        </div>
+        <h6 class='red-text hide' id='errorEl'>Be sure to fill in every available field before submitting your response!</h6>
+        <div class="row">
+
+          <div class="input-field col s6">
+
+            <i class="material-icons prefix">account_circle</i>
+
+            <input id="nameInput" type="text" class="validate">
+
+            <label for="nameInput">Name</label>
+
+          </div>
+
+          <div class="input-field col s6">
+
+            <i class="material-icons prefix">email</i>
+
+            <input id="emailInput" type="text" class="validate">
+
+            <label for="emailInput">Email</label>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="input-field col s12">
+
+            <i class="material-icons prefix">chat</i>
+
+            <input id="messageInput" type="text" class="validate">
+
+            <label for="messageInput">Send us a message</label>
+
+          </div>
+
+        </div>
+
+        <div class="row center">
+
+          <div class="col s4">
+            <a class="btn-floating btn-large waves-effect waves-light red mood" data-mood='dissatisfied'><i class="large material-icons">sentiment_dissatisfied</i></a>
+          </div>
+
+          <div class="col s4">
+            <a class="btn-floating btn-large waves-effect waves-light yellow mood" data-mood='neutral'><i class="material-icons">sentiment_neutral</i></a>
+          </div>
+
+          <div class="col s4">
+            <a class="btn-floating btn-large waves-effect waves-light green mood" data-mood='satisfied'><i class="material-icons">sentiment_satisfied</i></a>
+          </div>
+    
+        </div>
+        <button class='btn green'>Submit<i class="material-icons right">send</i></button>
+      </form>
+    </div>
+
+    <section id="popup" title='Thank you!'>
+      <h5>Before we submit your feedback, please check your information below for accuracy</h5>
+      <p>Your Name: <span id='nameSpan'></span></p>
+      <p>Your Email: <span id='emailSpan'></span></p>
+      <p>Your Message: <span id='messageSpan'></span></p>
+    </section>
+
   </main>
 
   <!--insert footer from index-->
 
-  <!-- Compiled and minified JavaScript -->
+  <!-- Materialize.js link -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <!-- jQuery Script -->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
+
   <!-- Jquery UI.js Link -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
     integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-  <script src="./script.js"></script>
+
+  <!-- Local javascript file -->
+  <script src="../assets/contact.js"></script>
 </body>
 
 </html>
