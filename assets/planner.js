@@ -15,6 +15,9 @@ $(document).ready(function () {
         }).then(response => {
             console.log(response);
             console.log(response.results[0].id)
+
+            for (result in response.results) 
+
             $.ajax({
                 'url': 'https://api.spoonacular.com/recipes/' + response.results[0].id + '/information?includeNutrition=false&apiKey=ff17a00df0ff4e7e89e1f7512d404731',
                 'method': 'GET'
