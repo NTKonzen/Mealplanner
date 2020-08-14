@@ -1,10 +1,17 @@
 // JavaScript for groclist.html specific elements
+// VARIABLES
+const grocList = $('#groc-list');
+const listItem = $('.list-item');
+const inputField = $('.input-field');
+// WHEN THE PAGE LOADS
 
 // FUNCTIONS
+function updateIDs () {
 
-// BUTTON ELEMENTS  
+}
+// BUTTON FUNCTIONS
 // add a list element
-$("#add-list-item").on("click", function () {
+function addListItem() {
   const listItem = 
   $(`<div class="row list-item">
       <div class="input-field">
@@ -13,14 +20,17 @@ $("#add-list-item").on("click", function () {
       </div>
     </div>`);
   $('#groc-list').append(listItem);
-});
+}
+// save list changes
+function saveList() {
+  updateIDs();
+  let textInputEl = inputField.children('type:text');
+  let textInputID = textInputEl.attr('id');
+  localStorage.setItem(textInputID, textInputEl.val());
+}
 // remove checked items
-$("#clear-check-items").on("click", function () {
-  let inputField = $('.input-field');
+function clearChecks() {
   let checkboxes = inputField.children('input:checked');
   checkboxes.parent().parent().remove();
-});
-// save list changes
-$("#save-list").on("click", function () {
-  //local storage. save all changes. probably using an array here
-});
+  saveList();
+}
