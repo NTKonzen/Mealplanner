@@ -1,33 +1,55 @@
-/* CSS files add styling rules to your content */
+* {
+  background-color: whitesmoke;
+}
 
-body {
-    font-family: helvetica, arial, sans-serif;
-    margin: 2em;
-  }
-  
-  h1 {
-    font-style: italic;
-    color: #373fff;
 
-  }
+nav {
+  background-color: green;
+}
 
-  #calender {
-    background-color: #373fff;
-  }
+/*  acneed to place logo below */
+/* .brand-logo {
+  background-image: url("https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.yote.io%2Fblog%2Flogosmall&psig=AOvVaw0mg2_Q2p5LMxIwpaxARart&ust=1597447573402000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICUrouqmesCFQAAAAAdAAAAABAI");
+}
+ */
+main {
+  color: green;
+}
 
-  #monday {
-    min-height: 5rem;
-    text-align: justify;
-  }
-  
-  body {
-   background-image: url("https://cdn.glitch.com/ef9aacd4-18b2-45ec-9f33-3942ef1003dc%2Fpexels-ella-olsson-1640772%20(1).jpg?v=1597203890326");
-   image-size:
-  
-  }
-  
-  /* HIIIIII TALIA!!!! */ 
-  
-  /* css for the planner -Talia */ 
-  
-  
+/* added footer Aug. 13 2:26pm-5pm talia */
+.footer {
+  /* Positioning */
+  position: absolute;
+  bottom: 0;
+  /* Box-model */
+  width: 100vw;
+  height: 70px;
+  /* Visual */
+  background-color: green;
+}
+.text-muted-footer {
+  /* Box-model */
+  margin-top: 16px;
+  width: 100%;
+  /* Typography */
+  color: white;
+  text-align: center;
+  background-color: green;
+}
+.two-toned-footer-color {
+  /* Box-model */
+  height: 7px;
+  width: 100%;
+  padding-top: red;
+  /* Visual */
+  background-color: lightgreen;
+}
+.hero {
+  height: 100vw;
+   width: 100%;
+  margin-bottom: 0px;
+  background-image: url("https://cdn.glitch.com/02b9d0e6-8f3a-4d36-beb7-f7bfc4a8c7f9%2Fbg1.jpg?v=1597352938630");
+  background-size: cover;
+  background-position: center;
+}
+
