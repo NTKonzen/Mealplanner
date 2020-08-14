@@ -3,12 +3,13 @@
 const grocList = $('#groc-list');
 const listItem = $('.list-item');
 const inputField = $('.input-field');
+let textInputEl = inputField.children('type:text');
 // WHEN THE PAGE LOADS
 
+let textCont = localStorage.getItem();
+textInputEl.val(textCont);
 // FUNCTIONS
-function updateIDs () {
 
-}
 // BUTTON FUNCTIONS
 // add a list element
 function addListItem() {
@@ -23,8 +24,6 @@ function addListItem() {
 }
 // save list changes
 function saveList() {
-  updateIDs();
-  let textInputEl = inputField.children('type:text');
   let textInputID = textInputEl.attr('id');
   localStorage.setItem(textInputID, textInputEl.val());
 }
@@ -33,4 +32,5 @@ function clearChecks() {
   let checkboxes = inputField.children('input:checked');
   checkboxes.parent().parent().remove();
   saveList();
+  //the function doesn't work properly when you have more than one check. figure that out later.
 }
