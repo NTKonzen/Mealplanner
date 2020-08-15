@@ -29,7 +29,8 @@ $(document).ready(function () {
                    console.log(recipe)
                    let calories = Math.floor(recipe.calories / recipe.yield);
                    console.log(calories)
-                   let uploadRecipe = '<article class="valign-wrapper">' +
+                   let uploadRecipe =
+                   '<article class="valign-wrapper">' +
                    '<div class="card">' +
                    '<div class="card-image">' +
                    '<img class="recipe-image" src="' + recipe.image + '" alt="image of recipe">' +
@@ -41,11 +42,12 @@ $(document).ready(function () {
                    '<ul class="ingredients">' + recipe.ingredients.text + '</ul>' +
                    '<hr>' +
                    '<a href="' + recipe.url + '">View this Recipe!</a>' +
-                   '<hr>' +
-                   '<a class="btn waves-effect waves-light" "type="submit" name="action">Save Recipe<i class="material-icons right send"></i></button>' + 
+                   '<footer class="card-footer">' +
+                   '<a class="btn waves-effect waves-light" "type="submit" name="action">Add To Planner<i class="material-icons right send"></i></button>' + 
+                   '<a class="btn waves-effect waves-light" "type="submit name="action">Save Recipe</button>' +
+                   '</footer>' +
                    '</div>' +
-                   '</article>'
-
+                   '</article>' + 
                    $("#recipe-cards").append(uploadRecipe);
                    
                })
