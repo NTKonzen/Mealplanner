@@ -7,23 +7,23 @@ let textInputEl = inputField.children('type:text');
 let grocItems = JSON.parse(localStorage.getItem("grocItems")) || [];
 console.log(grocItems);
 // WHEN THE PAGE LOADS
-
-
-
-// i being the array, trigger addListItem until i = the length of the array
-// place each inputField object into an actual input-field
-
-// let textCont = localStorage.getItem();
-// textInputEl.val(textCont);
-
+updateWithStoredItems();
+function updateWithStoredItems() {
+  if (grocItems.length > 0) {
+    grocList.empty()
+    grocItems.forEach(function(item) {
+      addListItem(item);
+    });
+  }
+}
 // BUTTON FUNCTIONS
 // add a list element
-function addListItem() {
+function addListItem(item) {
   const listItem = 
   $(`<div class="row list-item">
       <div class="input-field">
-        <input type="checkbox" />
-        <input placeholder="Grocery Item" type="text" class="validate">
+        <input type="checkbox" ${item.isChecked ? "checked" : ""}/>
+        <input placeholder="Grocery Item" type="text" class="validate" value="${item.grocText}">
       </div>
     </div>`);
   $('#groc-list').append(listItem);
@@ -34,19 +34,20 @@ function saveList() {
   inputField.each(function () {
     let isChecked = $(this).children("input[type='checkbox']").is(':checked');
     let grocText = $(this).children("input[type='text']").val();
-    grocItems.push({
-      isChecked: isChecked, grocText: grocText,
-    });
+    if (grocText) {
+      grocItems.push({
+        isChecked: isChecked, grocText: grocText,
+      });
+    }
   });
   console.log(grocItems)
   localStorage.setItem("grocItems", JSON.stringify(grocItems))
 }
-// remove checked items
+// remove checked items (and trigger save)
 function clearChecks() {
   inputField = $(".input-field");
   let checkboxes = inputField.children('input:checked');
   checkboxes.each (function () {
     $(this).parent().parent().remove();
   });
-  saveList();
 }
