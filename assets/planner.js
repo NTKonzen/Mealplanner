@@ -35,11 +35,11 @@ $(document).ready(function () {
                    '<div class="card-image">' +
                    '<img class="recipe-image" src="' + recipe.image + '" alt="image of recipe">' +
                    '</div>' +
-                   '<div class="card-content>' + 
+                   '<div class="card-content">' + 
                    '<h3 class="title">' + recipe.label + '</h3>' +
                    '<p class="recipeCal">' + calories + '</p>' +
                    '<p class="recipeServings">' + recipe.yield + '</p>' +
-                   '<ul class="ingredients">' + recipe.ingredients.text + '</ul>' +
+                   '<ul class="ingredients">' + recipe.ingredients.length + '</ul>' +
                    '<hr>' +
                    '<a href="' + recipe.url + '">View this Recipe!</a>' +
                    '<footer class="card-footer">' +
@@ -47,15 +47,26 @@ $(document).ready(function () {
                    '<a class="btn waves-effect waves-light" "type="submit name="action">Save Recipe</button>' +
                    '</footer>' +
                    '</div>' +
-                   '</article>' + 
+                   '</div>' +
+                   '</article>' 
                    $("#recipe-cards").append(uploadRecipe);
                    
+                   let ingredientsArr = [];
+                   recipe.ingredients.forEach(element => {
+                       console.log(element.text)
+                       ingredientsArr.push(element.text);
+                   })
                })
            }
        })
+       $("#recipe-search").val("");
 
     })
 
-    // recipes/716429/information?apiKey=ff17a00df0ff4e7e89e1f7512d404731&includeNutrition=true
-    // api key for spoonacular - ff17a00df0ff4e7e89e1f7512d404731 //
+    $('#recipe-search').keypress(function (e){
+        if (e.which == 13) {
+            $('#searchBtn').click();
+        }
+    })
+    
 });
