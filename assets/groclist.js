@@ -2,7 +2,7 @@
 // VARIABLES
 const grocList = $('#groc-list');
 const listItem = $('.list-item');
-const inputField = $('.input-field');
+let inputField = $('.input-field');
 let textInputEl = inputField.children('type:text');
 // WHEN THE PAGE LOADS
 
@@ -24,13 +24,23 @@ function addListItem() {
 }
 // save list changes
 function saveList() {
-  let textInputID = textInputEl.attr('id');
-  localStorage.setItem(textInputID, textInputEl.val());
+  inputField = $(".input-field");
+  let grocItems = [];
+  inputField.each (function () {
+    let isChecked = $(this).children('type:checkbox').val();
+    let grocText = $(this).children('type:text').val();
+    grocItems.push({
+      isChecked: isChecked, grocText: grocText,
+    });
+  });
+  localStorage.setItem("grocItems", JSON.stringify(grocItems))
 }
 // remove checked items
 function clearChecks() {
+  inputField = $(".input-field");
   let checkboxes = inputField.children('input:checked');
-  checkboxes.parent().parent().remove();
+  checkboxes.each (function () {
+    $(this).parent().parent().remove();
+  });
   saveList();
-  //the function doesn't work properly when you have more than one check. figure that out later.
 }
