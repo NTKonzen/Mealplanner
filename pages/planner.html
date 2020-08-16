@@ -9,28 +9,43 @@
     <!-- Fontawesome Link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <!-- jQuery UI CSS Link -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- noUISlider.css Link
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/extras/noUiSlider/nouislider.css"> -->
+        <!-- Materialize.css Link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Local CSS File -->
         <link rel="stylesheet" href="../assets/style.css">
+        <style>
+          #timeHandle {
+            width: auto;
+            height: 1.6em;
+            top: 50%;
+            margin-top: -.8em;
+            text-align: center;
+            line-height: 1.6em;
+          }
+          </style>
 </head>
 
 <body>
-
     <nav>
         <div class="nav-wrapper green">
           
-          <a href="#!" class="brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-      <!--       <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li> -->
+          <a href="#!" class="brand-logo right">F5FF</a>
+          <ul class="left">
+
             <!-- Dropdown Trigger -->
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i class="material-icons "></i></a></li>
           </ul>
         </div>
       </nav>
       <!-- Dropdown Trigger -->
         <ul id="dropdown1" class="dropdown-content">
-          <li><a href="#!"><i class="material-icons">local_phone</i>Contact</a></li>
-          <li><a href="#!"><i class="material-icons">view_module</i>Planner</a></li>
-          <li><a href="#!"><i class="material-icons">kitchen</i>Grocery List</a></li> 
+          <li><a href="./contact.html"><i class="material-icons"></i>Contact</a></li>
+          <li><a href="#!"><i class="material-icons"></i>Planner</a></li>
+          <li><a href="./groclist.html"><i class="material-icons"></i>Grocery</a></li> 
           </ul>
           
             <main class="container">
@@ -325,6 +340,28 @@
                 </div>
               </div>
         <!--end of calender-->
+
+        <div id='chooseWhenDialog' title='Schedule This Recipe'>
+          <h5>Choose what day you want to prepare this recipe:</h5>
+          <form>
+            <div class="input-field" id='daySelect'>
+              <select>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+              </select>
+            </div>
+            <h5 style='margin-bottom: 70px; margin-top: 20px;'>Choose what time you want to have this recipe:</h5>
+            <div id='timeSlider' style='margin-bottom: 35px; position: absolute; bottom: 0;'>
+              <div id='timeHandle' class='ui-slider-handle'></div>
+            </div>
+          </form>
+          
+        </div>
     </main>
 
    <div class="row">
@@ -344,12 +381,18 @@
     <!--insert sticky footer from index.html-->
 
     <!-- jQuery Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Materialize.js Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- jQuery UI Link -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
     integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <!-- noUISlider.js Link -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/extras/noUiSlider/nouislider.js"></script> -->
+    <!-- Moment.js Link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Local JS Link -->
     <script src="../assets/planner.js"></script>
 </body>
 

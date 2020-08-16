@@ -1,7 +1,8 @@
-
-
-    $('#startBtn').click(function () {
-        location.replace('./planner.html');
+$(document).ready(function () {
+     
+     
+     $('#startBtn').click(function () {
+        location.replace('./pages/planner.html');
         JSON.parse(localStorage.getItem('mondayMeals'));
         localStorage.getItem('tuesdayMeals');
         localStorage.getItem('wednesdayMeals');
@@ -11,4 +12,4 @@
         localStorage.getItem('sundayMeals');
     });
 
-   
+});
