@@ -10,18 +10,33 @@ $('#chooseWhenDialog').dialog({
     modal: true,
     width: 700,
     draggable: false,
-    height: 'auto',
     close: function () {
         $('html, body').css({
             overflow: 'auto',
             height: 'auto'
         });
-    }
+    },
+    buttons: [
+        {
+            text: 'Add to Planner',
+            // Add classes below within the quotes, spaces in between each class
+            class: 'btn',
+            click: function() {
+                let mealDay = $('#daySelect').val();
+                console.log(mealDay);
+                let mealTime = $('#timeHandle').text()
+                console.log(mealTime);
+                let meal = $('input[name=whichMeal]:checked').next().text();
+                console.log(meal);
+                $('#chooseWhenDialog').dialog('close')
+            }
+        }
+    ]
 })
 
 $("#timeSlider").slider({
     min: 0,
-    max: 1440,
+    max: 1425,
     step: 15,
     value: 600,
     create: function () {
@@ -56,7 +71,10 @@ $("#timeSlider").slider({
     }
 });
 
-
+$('.ingredientsList').accordion({
+    collapsible: true,
+    active: false
+});
 
 $(document).ready(function () {
 
@@ -83,7 +101,6 @@ $(document).ready(function () {
                     console.log(calories)
                     let ingredientsArr = [];
                     recipe.ingredients.forEach(i => {
-                        console.log(i.text)
                         ingredientsArr.push(i.text);
                     });
 
@@ -93,7 +110,6 @@ $(document).ready(function () {
                         let newListItem = $('<li>')
                         newListItem.text(item)
                         newList.append(newListItem);
-                        console.log(item)
                     })
 
                     let uploadRecipe =
@@ -127,24 +143,25 @@ $(document).ready(function () {
                     $('#timeSlider').width($('#daySelect').width())
                     $('input.dropdown-trigger').click(function (event) {
                         event.stopPropagation();
-                        console.log($('.dropdown-content').css('display'))
                         if ($('div[role="dialog"]').height() < $('ul.select-dropdown').height()) {
                             console.log(event.target)
                             let adjustedHeight = $('div[role="dialog"]').height() + $('ul.select-dropdown').height();
                             $('#chooseWhenDialog').dialog("option", "height", adjustedHeight)
                         }
-
+                        $('#dialogBottom').css('margin-top', $('ul.select-dropdown').height())
                     })
 
                     $('li').click(function (event) {
                         if ($(this).parent().hasClass('select-dropdown')) {
-                            $('#chooseWhenDialog').dialog("option", "height", 'auto')
+                            $('#chooseWhenDialog').dialog("option", "height", 'auto');
+                            $('#dialogBottom').css('margin-top', 'auto')
                         }
                     })
 
                     $('#chooseWhenDialog').click(function () {
                         if ($('.dropdown-content').css('display') === 'none') {
                             $('#chooseWhenDialog').dialog("option", "height", 'auto')
+                            $('#dialogBottom').css('margin-top', 'auto')
                         }
                     })
                 })
