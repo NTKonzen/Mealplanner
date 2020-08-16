@@ -111,3 +111,27 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+#welcome-page {
+  background-image: url(./bg1.jpg);
+  background-size: cover;
+}
+
+#index-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+#startBtn {
+  border-radius: 20px;
+  height: 6rem;
+  padding-top: 1rem;
+  font-size: 5rem;
+  margin-top: 18rem;
+  font-family: "Brush Script MT", cursive;
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.262);
+  color: white;
+}
+
