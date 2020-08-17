@@ -83,15 +83,16 @@ $('.ingredientsList').accordion({
 
 $(document).ready(function () {
 
-    console.log(moment().format('dddd'))
-
-    // Hi these are notes for me(Nick) to display the proper dates I'll take care of them
-    // Select the element with the associated day
-    // find out how many there were before and after it in the $('.dateDisplay') array
-    // log the elements before the associated day
-    // log the elements after the associated day
-    // use $('.dateDisplay')/after .each( date + 1) to set the upcoming dates
-    // use $('.dateDisplay')/before .each( $('.dateDisplay').length - date)
+    let currentDayEl = $('[data-day="' + moment().format("dddd") + '"]');
+    currentDayEl.find('.dateDisplay').text(moment().format('L'));
+    let nextDaysEls = currentDayEl.nextAll('[data-day]')
+    nextDaysEls.each(function (index, element) {
+        $(element).find('.dateDisplay').text(moment().add(index + 1, 'days').format('L'))
+    })
+    let prevDaysEls = currentDayEl.prevAll('[data-day]')
+    prevDaysEls.each(function (index, element) {
+        $(element).find('.dateDisplay').text(moment().subtract(index + 1, 'days').format('L'))
+    })
 
     $('select').formSelect();
 
