@@ -17,7 +17,7 @@ The Fab Five's Fantastic Foods Meal Planner is our first project for our UCSD Ex
 
 This is a meal planner that not only helps you keep track of breakfast, lunch, and dinner. But it also let's you search for recipes to add to your schedule, and has an interactive grocery list. We also have a contact page to report any issues or ask for help.
 
-[Fab 5's Fantastic Foods Meal Planner deployed link](https://tbsanders5.github.io/mealplanner/)
+[Meal Planner deployed link](https://tbsanders5.github.io/mealplanner/)
 
 [welcome page](insert path here)
 
@@ -29,17 +29,24 @@ This is a meal planner that not only helps you keep track of breakfast, lunch, a
 
 ## Usage
 
-[insert instructions for how to use the mealplanner here]
+When you first enter the meal planner, click "Lets Get Started!" to go to the actual page.
+
+When you get to the planner page, scroll to the bottom and search a recipe, you will have many options to choose from, you can then add them to the planner by selecting that day of the week, meal, and time. When you scroll back up you will see your changes. You can then click on the Recipe Link to be taken to the website hosting your recipe, or you can click on the Ingredients dropdown to see what ingredients you will need and how much.
+
+On the Grocery List page, you can create a grocery list based off of your meals, which will remember all your entires session to session. "Add an Item" to... add an item, check things you bought (or changed your mind about) and click "Remove Checks" to remove them, and finally, "Save List" to save all of your changes. Reload the page and all your entries will be there!
+
+On the Contact page, you can reach out to us to help with the application. Fill out your name, Email, message, and a little emoji displaying your feelings. Hit "Submit" to send your message to a special email for the application.
 
 ## Tests
 
-[insert tests for the meal planner here. show off all our cool features]
+1. [insert test for the planner page here]
+2. In the Grocery List, fill out boxes, check some filled out boxes and leave others empty, check and un-check empty boxes. Click "Save List", reload the page, and see what pops up!
 
 ## Contributors
 
 This Meal Planner was made though that combined efforts of the Fab 5:
 
- * [Timothy Sanders](https://github.com/tbsanders5) - HTML and JavaScript + Project Manager
+ * [Timothy Sanders](https://github.com/tbsanders5) - HTML and JavaScript
  * [Nicholas Konzen](https://github.com/NTKonzen) - HTML and JavaScript
  * [Kira I. Lowrey](https://github.com/KILowrey) - HTML and JavaScript
  * [Talia Vazquez](https://github.com/taliavazquez) - CSS and Materialize
@@ -54,6 +61,10 @@ This Meal Planner was made though that combined efforts of the Fab 5:
 [jQuery UI](https://jqueryui.com/)
 
 > "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library."
+
+[JotForm](https://www.jotform.com/)
+
+> "Easy-to-use online form builder for every business. Create online forms and publish them. Get an email for each response. Collect data."
 
 [Materialize](https://materializecss.com/)
 
