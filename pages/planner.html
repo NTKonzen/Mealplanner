@@ -26,6 +26,14 @@
       text-align: center;
       line-height: 1.6em;
     }
+
+    .ui-accordion-content {
+      padding-left: 1em !important;
+      padding-right: 1em !important;
+      line-height: 2em !important;
+      /* This isn't working for some reason */
+      list-style-type: disc !important;
+    }
   </style>
 </head>
 
@@ -50,11 +58,11 @@
 
   <main class="container">
 
-    <div class="row">
+    <div class="row" data-day='Monday'>
       <div class=" ">
         <h4>
           Monday
-          <span id='monDate'>(MM/DD/YYYY)</span>
+          <span id='monDate' class='dateDisplay'>(MM/DD/YYYY)</span>
         </h4>
       </div>
 
@@ -122,11 +130,11 @@
     </div>
 
 
-    <div class="row">
+    <div class="row" data-day='Tuesday'>
       <div>
         <h4>
           Tuesday
-          <span id='tuesDate'>(MM/DD/YYYY)</span>
+          <span id='tuesDate' class='dateDisplay'>(MM/DD/YYYY)</span>
         </h4>
 
       </div>
@@ -191,11 +199,11 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" data-day='Wednesday'>
       <div>
         <h4>
           Wednesday
-          <span id='wedDate'>(MM/DD/YYYY)</span>
+          <span id='wedDate' class='dateDisplay'>(MM/DD/YYYY)</span>
         </h4>
 
 
@@ -261,11 +269,11 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" data-day='Thursday'>
       <div>
         <h4>
           Thursday
-          <span id='thursDate'>(MM/DD/YYYY)</span>
+          <span id='thursDate' class='dateDisplay'>(MM/DD/YYYY)</span>
         </h4>
 
 
@@ -331,11 +339,11 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" data-day='Friday'>
       <div>
         <h4>
           Friday
-          <span id='friDate'>(MM/DD/YYYY)</span>
+          <span id='friDate' class='dateDisplay'>(MM/DD/YYYY)</span>
         </h4>
 
 
@@ -403,11 +411,11 @@
     </div>
 
 
-    <div class="row">
+    <div class="row" data-day='Saturday'>
       <div>
         <h4>
           Saturday
-          <span id='satDate'>(MM/DD/YYYY)</span>
+          <span id='satDate' class='dateDisplay'>(MM/DD/YYYY)</span>
         </h4>
 
 
@@ -473,13 +481,13 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" data-day='Sunday'>
       <div>
 
 
         <h4>
           Sunday
-          <span id='sunDate'>(MM/DD/YYYY)</span>
+          <span id='sunDate' class='dateDisplay'>(MM/DD/YYYY)</span>
         </h4>
 
 

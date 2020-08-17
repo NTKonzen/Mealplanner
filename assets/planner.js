@@ -1,4 +1,7 @@
 const plannerInput = [];
+let recipeName;
+let recipeLink;
+let recipeIngredients;
 
 document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.dropdown-trigger');
@@ -21,13 +24,15 @@ $('#chooseWhenDialog').dialog({
             text: 'Add to Planner',
             // Add classes below within the quotes, spaces in between each class
             class: 'btn',
-            click: function() {
+            click: function () {
                 let mealDay = $('#daySelect').val();
-                console.log(mealDay);
                 let mealTime = $('#timeHandle').text()
-                console.log(mealTime);
                 let meal = $('input[name=whichMeal]:checked').next().text();
-                console.log(meal);
+                let mealEl = $("[data-day=" + mealDay + "]").find('.card-title:contains(' + meal + ')').parent()
+                mealEl.find('a').attr({ 'href': recipeLink, 'target': '_blank' })
+                mealEl.find('.timeDisplay').text(mealTime)
+                mealEl.find('a').text(recipeName)
+                mealEl.find('ul').html(recipeIngredients)
                 $('#chooseWhenDialog').dialog('close')
             }
         }
@@ -73,10 +78,20 @@ $("#timeSlider").slider({
 
 $('.ingredientsList').accordion({
     collapsible: true,
-    active: false
+    active: false,
 });
 
 $(document).ready(function () {
+
+    console.log(moment().format('dddd'))
+
+    // Hi these are notes for me(Nick) to display the proper dates I'll take care of them
+    // Select the element with the associated day
+    // find out how many there were before and after it in the $('.dateDisplay') array
+    // log the elements before the associated day
+    // log the elements after the associated day
+    // use $('.dateDisplay')/after .each( date + 1) to set the upcoming dates
+    // use $('.dateDisplay')/before .each( $('.dateDisplay').length - date)
 
     $('select').formSelect();
 
@@ -124,17 +139,17 @@ $(document).ready(function () {
                         '<p class="recipeServings"> Servings: ' + recipe.yield + '</p>' +
                         $(newList)[0].outerHTML +
                         '<hr>' +
-                        '<a href="' + recipe.url + '">View this Recipe!</a>' +
+                        '<a href="' + recipe.url + '" class="recipeLink" >View this Recipe!</a>' +
                         '<footer class="card-footer">' +
-                        '<a class="btn waves-effect waves-light" data-function="add" "type="submit" name="action">Add To Planner<i class="material-icons right send"></i></button>' +
-                        '<a class="btn waves-effect waves-light" "type="submit name="action">Save Recipe</button>' +
+                        '<a class="btn waves-effect waves-light addTo" data-function="add" "type="submit" name="action">Add To Planner<i class="material-icons right send"></i></button>' +
+                        '<a class="btn waves-effect waves-light" "type="submit" name="action">Save Recipe</button>' +
                         '</footer>' +
                         '</div>' +
                         '</div>' +
                         '</article>'
                     $("#recipe-cards").append(uploadRecipe);
                 })
-                $('a').data('function', 'add').click(function (event) {
+                $('.addTo').click(function (event) {
                     event.stopPropagation();
                     $('html, body').css({
                         overflow: 'hidden',
@@ -164,6 +179,13 @@ $(document).ready(function () {
                             $('#dialogBottom').css('margin-top', 'auto')
                         }
                     })
+
+                    recipeName = $(this).parent().parent().find('.title').text();
+
+                    recipeLink = $(this).parent().parent().find('a.recipeLink').attr('href')
+
+                    recipeIngredients = $(this).parent().parent().find('ul').html()
+
                 })
             }
         })
