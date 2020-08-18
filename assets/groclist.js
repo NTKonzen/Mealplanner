@@ -1,4 +1,8 @@
 // JavaScript for groclist.html specific elements
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = $('[data-target="dropdown1"]')[0];
+  var instances = M.Dropdown.init(elems);
+});
 // VARIABLES
 const grocList = $('#groc-list');
 const listItem = $('.list-item');
@@ -11,28 +15,56 @@ updateWithStoredItems();
 function updateWithStoredItems() {
   if (grocItems.length > 0) {
     grocList.empty()
-    grocItems.forEach(function(item) {
+    grocItems.forEach(function (item) {
       addListItem(item);
     });
+  } else {
+    grocList.empty()
+    for (let i = 1; i <= 3; i ++) {
+      addListItem({isChecked: false, grocText: ''})
+    }
   }
 }
+
 // BUTTON FUNCTIONS
+
+
 // add a list element
 function addListItem(item) {
-  const listItem = 
-  $(`<div class="row list-item">
-      <div class="input-field">
-        <input type="checkbox" ${item.isChecked ? "checked" : ""}/>
-        <input placeholder="Grocery Item" type="text" class="validate" value="${item.grocText}">
-      </div>
-    </div>`);
-  $('#groc-list').append(listItem);
+  const listItem =
+ $(`
+<div class="row list-item valign-wrapper">
+    <label class='col s1'>
+        <input type="checkbox" ${item.isChecked ? `checked='checked'` : ``}></input>
+        <span></span>
+    </label>
+    <input type='text' placeholder='Grocery Item' class='col s10 offset-s1' ${item.grocText ? `value='${item.grocText}'` : `value=''`}${item.isChecked ? `checked='checked'` : ``}"></input>
+</div>`);
+
+listItem.find('input[type="checkbox"]').click(function() {
+  let listItemEl = $(this).parent().parent()
+  console.log('Clicked ', $(this))
+  console.log('Containing List Item: ', listItemEl)
+  if ($(this).attr('checked') === 'checked') {
+    listItemEl.find('input[type="checkbox"]').removeAttr('checked')
+    listItemEl.find('input[type="text"]').removeAttr('checked')
+  } else {
+    listItemEl.find('input[type="checkbox"]').attr('checked', 'checked')
+    listItemEl.find('input[type="text"]').attr('checked', 'checked')
+  }
+})
+ 
+  $('#groc-list').append(listItem)
 }
+
+
 // save list changes
 function saveList() {
-  inputField = $(".input-field");
+  grocItems = []
+  inputField = $(".list-item");
   inputField.each(function () {
-    let isChecked = $(this).children("input[type='checkbox']").is(':checked');
+    console.log($(this))
+    let isChecked = $(this).children("input[type='text']").prop('checked');
     let grocText = $(this).children("input[type='text']").val();
     if (grocText) {
       grocItems.push({
@@ -45,9 +77,22 @@ function saveList() {
 }
 // remove checked items (and trigger save)
 function clearChecks() {
-  inputField = $(".input-field");
-  let checkboxes = inputField.children('input:checked');
-  checkboxes.each (function () {
-    $(this).parent().parent().remove();
-  });
+  inputField = $(".list-item");
+  let checkboxes = inputField.children('input[checked="checked"]');
+  console.log(checkboxes.parent())
+  checkboxes.parent().remove()
+
+  // checkboxes.each(function (index, element) {
+  //   $(element);
+  // });
 }
+// $('input[type="checkbox"]').click(function(event, element) {
+//   console.log($(this).prop('checked'))
+//   if ($(this).prop('checked') === 'checked') {
+//     $(this).removeAttr('checked')
+//     $(this).parent().next().removeAttr('checked')
+//   } else {
+//     $(this).attr('checked', 'checked')
+//     $(this).parent().next().attr('checked', 'checked')
+//   }
+// })

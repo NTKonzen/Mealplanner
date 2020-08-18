@@ -16,32 +16,13 @@
   <!-- Local CSS File -->
   <link rel="stylesheet" href="../assets/style.css">
 
-  <!-- Hi Talia and Zach! This little chunk of CSS is for the time slider handle on the popup window! You can throw it into the CSS file and edit it however as long as it still displays the time and 'AM' or 'PM' -->
-  <style>
-    #timeHandle {
-      width: auto;
-      height: 1.6em;
-      top: 50%;
-      margin-top: -.8em;
-      text-align: center;
-      line-height: 1.6em;
-    }
-
-    .ui-accordion-content {
-      padding-left: 1em !important;
-      padding-right: 1em !important;
-      line-height: 2em !important;
-      /* This isn't working for some reason */
-      list-style-type: disc !important;
-    }
-  </style>
 </head>
 
-<body>
+<body id="welcome-page">
   <nav>
     <div class="nav-wrapper green">
 
-      <a href="#!" class="brand-logo right">F5FF</a>
+      <a href="./planner.html" class="brand-logo right">F5FF</a>
       <ul class="left">
 
         <!-- Dropdown Trigger -->
@@ -59,31 +40,31 @@
   <main class="container">
 
     <div class="row" data-day='Monday'>
-      <div class=" ">
         <h4>
           Monday
           <span id='monDate' class='dateDisplay'>(MM/DD/YYYY)</span>
         </h4>
-      </div>
 
 
       <div class="col s2 m4">
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Breakfast</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="monBreak">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green jumpBtn'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -91,19 +72,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Lunch</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="monLunch">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide cardContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monLunch">
+              <a>Recipe Link</a>
+              <div class='ingredientsList'>
+                <p>Ingredients</p>
+                <ul>
+                </ul>
+              </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -111,23 +93,24 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Dinner</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="monDin">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide cardContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monDin">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                <p>Ingredients</p>
+                <ul>
+                </ul>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
     <div class="row" data-day='Tuesday'>
@@ -142,19 +125,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Breakfast</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="tuesBreak">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -162,19 +146,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Lunch</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="tuesLunch">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -182,23 +167,25 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Dinner</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="tuesDin">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="row" data-day='Wednesday'>
       <div>
         <h4>
@@ -206,25 +193,25 @@
           <span id='wedDate' class='dateDisplay'>(MM/DD/YYYY)</span>
         </h4>
 
-
       </div>
       <div class="col s2 m4">
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Breakfast</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="wedBreak">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -232,19 +219,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Lunch</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="wedLunch">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -252,23 +240,25 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Dinner</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="wedDin">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="row" data-day='Thursday'>
       <div>
         <h4>
@@ -282,19 +272,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Breakfast</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="thurBreak">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -302,19 +293,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Lunch</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="thurLunch">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -322,23 +314,25 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Dinner</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="thurDin">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="row" data-day='Friday'>
       <div>
         <h4>
@@ -352,19 +346,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Breakfast</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="friBreak">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -372,19 +367,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Lunch</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="friLunch">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -392,24 +388,24 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Dinner</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="friDin">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
 
     <div class="row" data-day='Saturday'>
       <div>
@@ -424,19 +420,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Breakfast</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="satBreak">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -444,19 +441,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Lunch</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="satLunch">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -464,23 +462,25 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Dinner</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="satDin">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="row" data-day='Sunday'>
       <div>
 
@@ -496,19 +496,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Breakfast</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="sunBreak">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -516,19 +517,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Lunch</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id=sunLunch>
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -536,19 +538,20 @@
         <div class="card grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Dinner</span>
-            <h6 class='timeDisplay'>12:00 PM</h6>
-            <p id="sunDin">
-              <a>Recipe Link</a>
-            <div class='ingredientsList'>
-              <p>Ingredients</p>
-              <ul>
-                <li>Eggs</li>
-                <li>Bread</li>
-                <li>Tears</li>
-                <li>Butter</li>
-              </ul>
+            <div class='mealPlaceholder'>
+              <a href='#recipe-search' class='btn green'>Find a Meal</a>
             </div>
-            </p>
+            <div class='hide mealContent'>
+              <h6 class='timeDisplay'>12:00 PM</h6>
+              <p id="monBreak">
+                <a>Recipe Link</a>
+                <div class='ingredientsList'>
+                  <p>Ingredients</p>
+                  <ul>
+                  </ul>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -597,10 +600,9 @@
 
   <div class="row">
 
-    <section class="form-group col s4">
-      <label for="search">Recipe Search:</label>
-      <input type="text" class="form-control" id="recipe-search">
-      <button id="searchBtn">Search</button>
+    <section class="form-group col s4" id="recipe-box">
+      <label for="search" id="recipe-section">Recipe Search:</label>
+      <input type="text" class="form-control" id="recipe-search"><button class="btn green waves-effect waves-light"  id="searchBtn">Search</button>
     </section>
   </div>
 
@@ -610,6 +612,12 @@
     </section>
   </div>
   <!--insert sticky footer from index.html-->
+  <footer class="footer">
+    <div class="two-toned-footer-color"></div>
+    <p class="text-muted text-muted-footer text-center">
+    &copy; Copyright 2020 F5FF
+    </p>
+</footer>
 
   <!-- jQuery Script -->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = $('[data-target="dropdown1"]')[0];
+    var instances = M.Dropdown.init(elems);
+});
+
 $(document).ready(function () {
 
     $('#nameInput').val('');
