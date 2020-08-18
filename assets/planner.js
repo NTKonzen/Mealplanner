@@ -103,6 +103,7 @@ $(document).ready(function () {
     $('#searchBtn').click(function (event) {
         event.preventDefault()
         console.log('running')
+        $('#recipe-cards').empty()
         const recipeSearch = $('#recipe-search').val()
         app_id = "580e9c1d"
         api_key = "f3651c3d279f9b429a95b97fd5f70466"
