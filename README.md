@@ -13,19 +13,19 @@
 
 ## Description
 
-The Fab Five's Fantastic Foods Meal Planner is our first project for our UCSD Extention Full Stack Boot-camp. The assignment was to create something people needed, using third-party and server-side API's, a CSS framwork, and user interaction. We settled on a meal planner because we ourselves were in need of one. This project was put together in a short 2 weeks. Ane we are ultimately proud of our work.
+The Fab Five's Fantastic Foods is our first project for our UCSD Extention Full Stack Boot-camp. The assignment was to create something people needed, using third-party and server-side API's, a CSS framwork, and user interaction. We settled on a meal planner because we ourselves were in need of one. This project was put together in a short 2 weeks. Ane we are ultimately proud of our work.
 
 This is a meal planner that not only helps you keep track of breakfast, lunch, and dinner. But it also let's you search for recipes to add to your schedule, and has an interactive grocery list. We also have a contact page to report any issues or ask for help.
 
 [Meal Planner deployed link](https://tbsanders5.github.io/mealplanner/)
 
-[welcome page](insert path here)
+![welcome page](./assets/readme-images/welcomepage.png)
 
-[meal planner page](insert path here)
+![meal planner page](./assets/readme-images/plannerpage.png)
 
-[grocery list page](insert path here)
+![grocery list page](./assets/readme-images/gorcerypage.png)
 
-[contact page](insert path here)
+![contact page](./assets/readme-images/contactpage.png)
 
 ## Usage
 
@@ -39,7 +39,7 @@ On the Contact page, you can reach out to us to help with the application. Fill 
 
 ## Tests
 
-1. [insert test for the planner page here]
+1. Play around on the planner page. Check out all the recipes available. Add recipes with dates and times.
 2. In the Grocery List, fill out boxes, check some filled out boxes and leave others empty, check and un-check empty boxes. Click "Save List", reload the page, and see what pops up!
 
 ## Contributors
