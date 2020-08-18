@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact the Fab 5</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+ 
   <!-- Materialize icons Link -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
@@ -19,20 +19,32 @@
   <!-- Local CSS file -->
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
-<nav>
-  <a href="#" class="brand-logo">F5FF</a>
-  <ul class="dropdown-content">
-    <!--insert dropdown content tbd here-->
-  </ul>
-</nav>
 
-<body>
+<body id="welcome-page">
+  <nav>
+    <div class="nav-wrapper green">
+
+      <a href="./planner.html" class="brand-logo right">F5FF</a>
+      <ul class="left">
+
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i class="material-icons "></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Dropdown Trigger -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="./contact.html"><i class="material-icons"></i>Contact</a></li>
+    <li><a href="./planner.html"><i class="material-icons"></i>Planner</a></li>
+    <li><a href="./groclist.html"><i class="material-icons"></i>Grocery</a></li>
+  </ul>
+  <div class="container" id="contact-form">
     <div class="row">
       <!-- Put this in the form tag action="mailto:nicholaskonzen@gmail.com" method="post" enctype="text/plain" -->
       <form class="col s12" action="https://submit.jotform.com/submit/202275324030037/" method="post"
       name="form_202275324030037" id="202275324030037" accept-charset="utf-8" autocomplete="on">
         <div class="row">
-          <div class="col 12 center-header">Contact Us</div>
+          <h3>Contact Us</h3> 
         </div>
 
           <div class="input-field col s6">
@@ -80,7 +92,7 @@
         <div class="row center">
 
           <div class="col s4">
-            <a class="btn-floating btn-large waves-effect waves-light red mood" data-mood='dissatisfied'><i class="large material-icons">sentiment_dissatisfied</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light red mood" data-mood='dissatisfied'><i class="material-icons">sentiment_dissatisfied</i></a> 
           </div>
 
           <div class="col s4">
@@ -97,6 +109,8 @@
       </p>
       </form>
     </div>
+  
+  
 
     <section id="popup" title='Thank you!'>
       <h5>Before we submit your feedback, please check your information below for accuracy</h5>
@@ -105,9 +119,15 @@
       <p>Your Message: <span id='messageSpan'></span></p>
     </section>
 
-  </main>
+  
 
   <!--insert footer from index-->
+  <footer class="footer">
+    <div class="two-toned-footer-color"></div>
+    <p class="text-muted text-muted-footer text-center">
+    &copy; Copyright 2020 F5FF
+    </p>
+   </footer>
 
   <!-- Materialize.js link -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

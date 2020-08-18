@@ -1,34 +1,57 @@
-nav {
-  background-color: green;
+*{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-/*  need to place logo below */
-/* .brand-logo {
-  background-image: url("https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.yote.io%2Fblog%2Flogosmall&psig=AOvVaw0mg2_Q2p5LMxIwpaxARart&ust=1597447573402000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICUrouqmesCFQAAAAAdAAAAABAI");
+h1 {
+  color: white;
 }
- */
-main {
-  color: green;
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+
+brand-logo {
+  margin-right: 10px;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+#recipe-section {
+  color: white;
+  font-size: 20px;
+  padding-left: 5vw;
+  padding-top: 14px;
+  position: relative;
+  right: 2em;
+  top: .5em;
+  margin-top: -10rem !important;
+  border-radius: 20px;
+  /* width: 75%; */
+}
+#recipe-box {
+  background-color: grey;
+  border-radius: 20px;
+  margin-left: 33.3%;
+  margin-bottom: 30px;
+}
 
-/* added footer Aug. 13 2:26pm-5pm talia */
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-
   width: 100vw;
-  height: 70px;
-
   background-color: green;
+  /* clear: none; */
+  z-index: 100;
 }
 .text-muted-footer {
-  margin-top: 16px;
+  margin-top: 1px;
   width: 100%;
-
   color: white;
   text-align: center;
   background-color: green;
@@ -37,34 +60,10 @@ body {
 .two-toned-footer-color {
   height: 7px;
   width: 100%;
-  padding-top: red;
   background-color: lightgreen;
 }
-.hero {
-  height: 100vw;
-  width: 100%;
-  margin-bottom: 0px;
-  background-image: url("./assets/style.css");
-  background-size: cover;
-  background-position: center;
-}
 
-/* navbar */
-.navbar {
-  overflow: hidden;
-  background-color: green;
-}
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* drop down */
 .dropdown {
   float: left;
   overflow: hidden;
@@ -84,6 +83,11 @@ body {
 .navbar a:hover,
 .dropdown:hover .dropbtn {
   background-color: darkgreen;
+}
+
+.btn {
+  border-radius: 20px !important;
+
 }
 
 .dropdown-content {
@@ -113,8 +117,11 @@ body {
 }
 
 #welcome-page {
-  background-image: url(./bg1.jpg);
+  background-image: url(./bg2.jpg);
+  object-fit: cover;
   background-size: cover;
+  background-attachment: fixed;
+  /* background-repeat: no-repeat; */
 }
 
 #index-page {
@@ -123,15 +130,122 @@ body {
   justify-content: center;
  }
 
+#searchBtn {
+  border-radius: 20px;
+  background-color: green;
+  /* position: fixed; */
+  margin-bottom: .5em;
+}
+
 #startBtn {
   border-radius: 20px;
   height: 6rem;
   padding-top: 1rem;
   font-size: 5rem;
   margin-top: 18rem;
-  font-family: "Brush Script MT", cursive;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   box-shadow: none;
   background: rgba(0, 0, 0, 0.262);
   color: white;
 }
 
+
+.card-block {
+  min-height: 725px;
+  max-height: 725px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.ingredients {
+  height: 8rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-bottom: grey;
+}
+
+.card-image {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.recipe-image {
+  margin-top: 5px;
+  border-radius: 20px !important;
+  /* border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important; */
+}
+
+#contact-form{
+  background-color: grey !important;
+  border-radius: 20px;
+  padding: 2em;
+  padding-top: 0;
+  margin-top: 30px;
+  width: 70%;
+  color: white;
+}
+
+hr {
+  box-sizing: border-box !important;
+  opacity: 0.3 !important;
+}
+
+.groceryDiv {
+  background-color: grey !important;
+  border-radius: 20px;
+  padding: 2em;
+  padding-top: 0;
+  margin-top: 30px;
+  width: 70%;
+}
+
+.card {
+  border-radius: 20px;
+  transition: .4s;
+}
+
+.card:hover {
+  transform: scale(1.05) translate(-3px, -5px);
+  box-shadow: 10px 10px 17px -5px rgba(0,0,0,0.75);
+}
+
+
+#timeHandle {
+  width: auto;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+.ui-accordion-content {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  line-height: 2em !important;
+  /* This isn't working for some reason */
+  list-style-type: disc !important;
+}
+
+input:focus+label {
+  color: #4CAF50 !important;
+}
+input:focus {
+  border-bottom-color: black !important;
+}
+
+.input-field
+.prefix.active {
+  color: #4CAF50 !important;
+}
+
+.ui-accordion-content-active {
+  min-height: 150px;
+}
+@media (max-width:768px) {
+  img {
+    width:70%;
+ 
+  }
+}

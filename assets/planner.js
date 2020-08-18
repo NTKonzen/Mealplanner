@@ -4,7 +4,7 @@ let recipeLink;
 let recipeIngredients;
 
 document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.dropdown-trigger');
+    var elems = $('[data-target="dropdown1"]')[0];
     var instances = M.Dropdown.init(elems);
 });
 
@@ -28,7 +28,10 @@ $('#chooseWhenDialog').dialog({
                 let mealDay = $('#daySelect').val();
                 let mealTime = $('#timeHandle').text()
                 let meal = $('input[name=whichMeal]:checked').next().text();
-                let mealEl = $("[data-day=" + mealDay + "]").find('.card-title:contains(' + meal + ')').parent()
+                console.log($("[data-day=" + mealDay + "]"))
+                let mealEl = $("[data-day=" + mealDay + "]").find('.card-title:contains(' + meal + ')').parent();
+                mealEl.find('.mealContent').removeClass('hide')
+                mealEl.find('.mealPlaceholder').addClass('hide')
                 mealEl.find('a').attr({ 'href': recipeLink, 'target': '_blank' })
                 mealEl.find('.timeDisplay').text(mealTime)
                 mealEl.find('a').text(recipeName)
@@ -79,6 +82,7 @@ $("#timeSlider").slider({
 $('.ingredientsList').accordion({
     collapsible: true,
     active: false,
+    height: 'content'
 });
 
 $(document).ready(function () {
@@ -129,13 +133,14 @@ $(document).ready(function () {
                     })
 
                     let uploadRecipe =
-                        '<article class="valign-wrapper">' +
-                        '<div class="card">' +
+                        '<article class="col s4">' +
+                        '<div class="card card-block" id="recipeDis">' +
+                        '<br>' +
                         '<div class="card-image">' +
                         '<img class="recipe-image" src="' + recipe.image + '" alt="image of recipe">' +
                         '</div>' +
                         '<div class="card-content">' +
-                        '<h3 class="title">' + recipe.label + '</h3>' +
+                        '<h5 class="title">' + recipe.label + '</h5>' +
                         '<p class="recipeCal">' + calories + ' calories per serving</p>' +
                         '<p class="recipeServings"> Servings: ' + recipe.yield + '</p>' +
                         $(newList)[0].outerHTML +
@@ -143,12 +148,11 @@ $(document).ready(function () {
                         '<a href="' + recipe.url + '" class="recipeLink" >View this Recipe!</a>' +
                         '<footer class="card-footer">' +
                         '<a class="btn waves-effect waves-light addTo" data-function="add" "type="submit" name="action">Add To Planner<i class="material-icons right send"></i></button>' +
-                        '<a class="btn waves-effect waves-light" "type="submit" name="action">Save Recipe</button>' +
                         '</footer>' +
                         '</div>' +
                         '</div>' +
                         '</article>'
-                    $("#recipe-cards").append(uploadRecipe);
+                    $("#recipe-cards").prepend(uploadRecipe);
                 })
                 $('.addTo').click(function (event) {
                     event.stopPropagation();

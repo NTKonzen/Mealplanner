@@ -6,54 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Grocery List</title>
 
+    <!-- Materialize.css Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
     <!-- Fontawesome Link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-
     <!-- Our own CSS stylesheet -->
     <!-- added stylesheet Aug. 13 2:52pm talia -->
-    <link rel="stylesheet" href="assets/style.css" media="screen" />
+    <link rel="stylesheet" href="../assets/style.css" media="screen" />
 </head>
 
-<body>
+<body id="welcome-page">
+    <nav>
+        <div class="nav-wrapper green">
+    
+          <a href="./planner.html" class="brand-logo right">F5FF</a>
+          <ul class="left">
+    
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i class="material-icons "></i></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Dropdown Trigger -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="./contact.html"><i class="material-icons"></i>Contact</a></li>
+        <li><a href="./planner.html"><i class="material-icons"></i>Planner</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Grocery</a></li>
+      </ul>
 
     <!--insert nav from index.html-->
 
     <main class="container">
-        <div class="row">
+        <div class="row groceryDiv">
             <!--main section of the grocery list-->
-            <section class="col">
+            <section class="col" style='width: 100%; text-align: center'>
                 <!--using h1 for now, not permenant if need be-->
                 <h1>Grocery List</h1>
-                <form id="groc-list">
+                <form id="groc-list" style='width: 70%; margin: 0 auto'>
                     <!--start with 3 items. use the add button to dynamically add additional list-items-->
                     <!--an individual grocery item-->
-                    <div class="row list-item">
-                        <div class="input-field">
-                            <input type="checkbox" />
-                            <input placeholder="Grocery Item" type="text" class="validate">
-                        </div>
+                    <div class="row list-item valign-wrapper">
+                        <label class='col s1'>
+                            <input type="checkbox"></input>
+                            <span></span>
+                        </label>
+                        <input type='text' placeholder='Grocery Item' class='col s10 offset-s1'></input>
                     </div>
-                    <div class="row list-item">
-                        <div class="input-field">
-                            <input type="checkbox" />
-                            <input placeholder="Grocery Item" type="text" class="validate">
-                        </div>
+                    <div class="row list-item valign-wrapper">
+                        <label class='col s1'>
+                            <input type="checkbox"></input>
+                            <span></span>
+                        </label>
+                        <input type='text' placeholder='Grocery Item' class='col s10 offset-s1'></input>
                     </div>
-                    <div class="row list-item">
-                        <div class="input-field">
-                            <input type="checkbox" />
-                            <input placeholder="Grocery Item" type="text" class="validate">
-                        </div>
+                    <div class="row list-item valign-wrapper">
+                        <label class='col s1'>
+                            <input type="checkbox"></input>
+                            <span></span>
+                        </label>
+                        <input type='text' placeholder='Grocery Item' class='col s10 offset-s1'></input>
                     </div>
                 </form>
                 <div class="row">
                     <!--use the id "add-list-item" to dynamically create a new list item-->
-                    <button class="btn" id="add-list-item" onClick="addListItem()">Add an Item</button>
+                    <button class="btn green" id="add-list-item" onClick="addListItem({grocText: '', isChecked: false})">Add an Item</button>
                     <!--button that removes all of the checked items-->
-                    <button class="btn" id="clear-check-items" onClick="clearChecks()">Remove Checks</button>
+                    <button class="btn green" id="clear-check-items" onClick="clearChecks()">Remove Checks</button>
                     <!--save button for list-->
-                    <button class="btn" id="save-list" onClick="saveList()">Save List</button>
+                    <button class="btn green" id="save-list" onClick="saveList()">Save List</button>
                 </div>
             </section>
             <!--aside section that list nearby stores with delivery-->
@@ -81,9 +103,6 @@
 
     <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- Local JavaScript File -->
-    <script src="./script.js"></script>
 
     <!--adding the JS for this specific file-->
     <script src="../assets/groclist.js"></script>
