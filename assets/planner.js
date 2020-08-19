@@ -126,32 +126,35 @@ $(document).ready(function () {
         $(element).find('.dateDisplay').text(moment().subtract(index + 1, 'days').format('L'))
     })
 
-    mealList = JSON.parse(localStorage.getItem('mealList'))
+    console.log(localStorage.getItem('mealList'))
+    if (localStorage.getItem('mealList') !== null) {
+        mealList = JSON.parse(localStorage.getItem('mealList'))
 
-    mealList.forEach(function (item) {
-        let mealDay = item.mealDayProp
-        console.log(mealDay)
-        let mealTime = item.mealTimeProp
-        console.log(mealTime);
-        let mealDate = item.mealDateProp
-        console.log(mealDate);
-        let meal = item.mealProp;
-        console.log(meal);
-        let recipeName = item.recipeNameProp;
-        console.log(recipeName);
-        let recipeLink = item.recipeLinkProp;
-        console.log(recipeLink);
-        let recipeIngredients = item.recipeIngredientsProp;
-        console.log(recipeIngredients);
-        let mealEl = $("[data-day=" + mealDay + "]").find('.card-title:contains(' + meal + ')').parent();
-        console.log(mealEl);
-        mealEl.find('.mealContent').removeClass('hide');
-        mealEl.find('.mealPlaceholder').addClass('hide');
-        mealEl.find('a').attr({ 'href': recipeLink, 'target': '_blank' });
-        mealEl.find('.timeDisplay').text(mealTime);
-        mealEl.find('a').text(recipeName);
-        mealEl.find('ul').html(recipeIngredients);
-    })
+        mealList.forEach(function (item) {
+            let mealDay = item.mealDayProp
+            console.log(mealDay)
+            let mealTime = item.mealTimeProp
+            console.log(mealTime);
+            let mealDate = item.mealDateProp
+            console.log(mealDate);
+            let meal = item.mealProp;
+            console.log(meal);
+            let recipeName = item.recipeNameProp;
+            console.log(recipeName);
+            let recipeLink = item.recipeLinkProp;
+            console.log(recipeLink);
+            let recipeIngredients = item.recipeIngredientsProp;
+            console.log(recipeIngredients);
+            let mealEl = $("[data-day=" + mealDay + "]").find('.card-title:contains(' + meal + ')').parent();
+            console.log(mealEl);
+            mealEl.find('.mealContent').removeClass('hide');
+            mealEl.find('.mealPlaceholder').addClass('hide');
+            mealEl.find('a').attr({ 'href': recipeLink, 'target': '_blank' });
+            mealEl.find('.timeDisplay').text(mealTime);
+            mealEl.find('a').text(recipeName);
+            mealEl.find('ul').html(recipeIngredients);
+        })
+    }
 
     $('select').formSelect();
 
