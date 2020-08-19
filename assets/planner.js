@@ -2,6 +2,7 @@ const plannerInput = [];
 let recipeName;
 let recipeLink;
 let recipeIngredients;
+let mealList = []
 
 document.addEventListener('DOMContentLoaded', function () {
     var elems = $('[data-target="dropdown1"]')[0];
@@ -26,17 +27,44 @@ $('#chooseWhenDialog').dialog({
             class: 'btn',
             click: function () {
                 let mealDay = $('#daySelect').val();
-                let mealTime = $('#timeHandle').text()
+                let mealDate = $("[data-day=" + mealDay + "]").find('.dateDisplay').text()
+                let mealTime = $('#timeHandle').text();
                 let meal = $('input[name=whichMeal]:checked').next().text();
-                console.log($("[data-day=" + mealDay + "]"))
                 let mealEl = $("[data-day=" + mealDay + "]").find('.card-title:contains(' + meal + ')').parent();
-                mealEl.find('.mealContent').removeClass('hide')
-                mealEl.find('.mealPlaceholder').addClass('hide')
-                mealEl.find('a').attr({ 'href': recipeLink, 'target': '_blank' })
-                mealEl.find('.timeDisplay').text(mealTime)
-                mealEl.find('a').text(recipeName)
-                mealEl.find('ul').html(recipeIngredients)
-                $('#chooseWhenDialog').dialog('close')
+                mealEl.find('.mealContent').removeClass('hide');
+                mealEl.find('.mealPlaceholder').addClass('hide');
+                mealEl.find('a').attr({ 'href': recipeLink, 'target': '_blank' });
+                mealEl.find('.timeDisplay').text(mealTime);
+                mealEl.find('a').text(recipeName);
+                mealEl.find('ul').html(recipeIngredients);
+                $('#chooseWhenDialog').dialog('close');
+                console.log('mealDate exists', mealList.find(mealObject => mealObject.mealDateProp === mealDate))
+                console.log('meal', mealList.find(mealObject => mealObject.mealProp === mealDate))
+
+                if (mealList.find(function (mealObj) {
+                    if (mealObj.mealDateProp === mealDate && mealObj.mealProp === meal) {
+                        return true;
+                    }
+                }) !== undefined) {
+                    console.log('exists')
+                    let removeObj = mealList.find(mealObj => {
+                        if (mealObj.mealDateProp === mealDate && mealObj.mealProp === meal) {
+                            return true;
+                        }
+                    })
+                    mealList.splice($.inArray(removeObj, mealList), 1)
+                    console.log('removed ', removeObj)
+                    mealList.push({
+                        mealDateProp: mealDate, mealDayProp: mealDay, mealTimeProp: mealTime, mealProp: meal, recipeIngredientsProp: recipeIngredients, recipeLinkProp: recipeLink, recipeNameProp: recipeName
+                    })
+                } else {
+                    console.log('doesn\'t exist')
+                    mealList.push({
+                        mealDateProp: mealDate, mealDayProp: mealDay, mealTimeProp: mealTime, mealProp: meal, recipeIngredientsProp: recipeIngredients, recipeLinkProp: recipeLink, recipeNameProp: recipeName
+                    })
+                }
+                console.log(mealList)
+                localStorage.setItem('mealList', JSON.stringify(mealList))
             }
         }
     ]
@@ -96,6 +124,33 @@ $(document).ready(function () {
     let prevDaysEls = currentDayEl.prevAll('[data-day]')
     prevDaysEls.each(function (index, element) {
         $(element).find('.dateDisplay').text(moment().subtract(index + 1, 'days').format('L'))
+    })
+
+    mealList = JSON.parse(localStorage.getItem('mealList'))
+
+    mealList.forEach(function (item) {
+        let mealDay = item.mealDayProp
+        console.log(mealDay)
+        let mealTime = item.mealTimeProp
+        console.log(mealTime);
+        let mealDate = item.mealDateProp
+        console.log(mealDate);
+        let meal = item.mealProp;
+        console.log(meal);
+        let recipeName = item.recipeNameProp;
+        console.log(recipeName);
+        let recipeLink = item.recipeLinkProp;
+        console.log(recipeLink);
+        let recipeIngredients = item.recipeIngredientsProp;
+        console.log(recipeIngredients);
+        let mealEl = $("[data-day=" + mealDay + "]").find('.card-title:contains(' + meal + ')').parent();
+        console.log(mealEl);
+        mealEl.find('.mealContent').removeClass('hide');
+        mealEl.find('.mealPlaceholder').addClass('hide');
+        mealEl.find('a').attr({ 'href': recipeLink, 'target': '_blank' });
+        mealEl.find('.timeDisplay').text(mealTime);
+        mealEl.find('a').text(recipeName);
+        mealEl.find('ul').html(recipeIngredients);
     })
 
     $('select').formSelect();
