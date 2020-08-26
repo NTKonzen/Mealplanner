@@ -12,7 +12,7 @@
 
 ## Description
 
-The Fab Five's Fantastic Foods is our first project for our UCSD Extention Full Stack Boot-camp. The assignment was to create something people needed, using third-party and server-side API's, a CSS framwork, and user interaction. We settled on a meal planner because we ourselves were in need of one. This project was put together in a short 2 weeks. Ane we are ultimately proud of our work.
+The Fab Five's Fantastic Foods is our first project for our UCSD Extention Full Stack Boot-camp. The assignment was to create something people needed, using third-party and server-side API's, a CSS framwork, and user interaction. We settled on a meal planner because we ourselves were in need of one. This project was put together in a short 2 weeks. And we are ultimately proud of our work.
 
 This is a meal planner that not only helps you keep track of breakfast, lunch, and dinner. But it also let's you search for recipes to add to your schedule, and has an interactive grocery list. We also have a contact page to report any issues or ask for help.
 
