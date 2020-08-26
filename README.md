@@ -16,7 +16,7 @@ The Fab Five's Fantastic Foods is our first project for our UCSD Extention Full 
 
 This is a meal planner that not only helps you keep track of breakfast, lunch, and dinner. But it also let's you search for recipes to add to your schedule, and has an interactive grocery list. We also have a contact page to report any issues or ask for help.
 
-[Meal Planner deployed link](https://tbsanders5.github.io/mealplanner/)
+[Meal Planner deployed link](https://NTKonzen.github.io/mealplanner/)
 
 ![welcome page](./assets/readme-images/welcomepage.png)
 
